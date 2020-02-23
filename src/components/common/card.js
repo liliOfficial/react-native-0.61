@@ -55,14 +55,14 @@ const styles = StyleSheet.create({
         width: '100%',
         bottom: -8,
         shadowColor: '#000',
-        shadowOpacity: 0.8,
+        shadowOpacity: 0.3,
         shadowOffset: { width: 0, height: 1 },
         shadowRadius: 2,
         borderRadius: 5
     },
     backgroundImage: {
         width: '100%',
-        height: 180,
+        height: 220,
     },
     name: {
         marginTop: 10,

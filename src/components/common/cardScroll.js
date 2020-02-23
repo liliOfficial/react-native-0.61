@@ -24,6 +24,37 @@ export default function CardScroll(props) {
       date: '2019',
       isFavourite:false,
     },
+    {
+      id:3,
+      background: {
+        uri:
+          'https://terrigen-cdn-dev.marvel.com/content/prod/1x/captainmarvel_lob_crd_06.jpg',
+      },
+      name: 'Captain Marvel',
+      date: '2019',
+      isFavourite:false,
+    },
+    {
+      id:4,
+      background: {
+        uri:
+          'https://terrigen-cdn-dev.marvel.com/content/prod/1x/ant-manthewasp_lob_crd_01.jpg',
+      },
+      name: 'Ant-Man and The Wasp',
+      date: '2018',
+      isFavourite:true,
+    },
+    {
+      id:5,
+      background: {
+        uri:
+          'https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersinfinitywar_lob_crd_02_1.jpg',
+      },
+      name: 'Avengers: Infinity',
+      date: '2018',
+      isFavourite:true,
+    },
+
   ];
   return (
     <ScrollView horizontal={true} style={{ marginHorizontal: -5 }}>
@@ -31,7 +62,7 @@ export default function CardScroll(props) {
         return (
           <View key={data.id}
             style={{
-              width: 200,
+              width: 150,
               marginHorizontal: 5,
               marginTop: 10,
               marginBottom: 15,
