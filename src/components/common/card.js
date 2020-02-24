@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         width: '100%',
-        height: 220,
+        paddingBottom:'160%',
     },
     name: {
         marginTop: 10,

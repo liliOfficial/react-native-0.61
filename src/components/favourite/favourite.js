@@ -17,6 +17,7 @@ function FavouritePage(props) {
         <View style={styles.body}>
           <View style={styles.sectionContainer}>
             <Text style={styles.sectionTitle}>Favourite Movies</Text>
+            <Text>Click the star to remove movie from the list</Text>
             <View style={styles.list}>
               {favourite.map(data => {
                 return (
