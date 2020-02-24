@@ -6,15 +6,10 @@ import Card from '../common/card';
 import { connect } from 'react-redux';
 import { getMovies } from '../../actions';
 
-const { width: viewportWidth } = Dimensions.get('window');
-
 function FavouritePage(props) {
 
   const { movies } = props;
   const favourite = movies.filter(movie => movie.isFavourite == true);
-
-  // charactors.filter(e => e.name.toLowerCase().includes(keyword.toLowerCase()))
-
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -23,7 +18,7 @@ function FavouritePage(props) {
           <View style={styles.sectionContainer}>
             <Text style={styles.sectionTitle}>Favourite Movies</Text>
             <View style={styles.list}>
-              {favourite.map((data, index) => {
+              {favourite.map(data => {
                 return (
                   <View key={data.id}
                     style={{
@@ -32,7 +27,7 @@ function FavouritePage(props) {
                       marginTop: 10,
                       marginBottom: 15,
                     }}>
-                    <Card data={data} index={index} />
+                    <Card data={data} favouriteButton={true} />
                   </View>
                 );
               })}

@@ -6,7 +6,7 @@ export default function CardScroll(props) {
   const list = props.list;
   return (
     <ScrollView horizontal={true} style={{ marginHorizontal: -5 }}>
-      {list.map((data,index) => {
+      {list.map(data => {
         return (
           <View key={data.id}
             style={{
@@ -15,7 +15,7 @@ export default function CardScroll(props) {
               marginTop: 10,
               marginBottom: 15,
             }}>
-            <Card data={data} index={index} favouriteButton={true}/>
+            <Card data={data} favouriteButton={true} />
           </View>
         );
       })}

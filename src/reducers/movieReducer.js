@@ -9,7 +9,7 @@ export default (state = INITIAL_STATE, action) => {
         case MOVIE_TOGGLE_FAVOURITE:
             return Object.assign({}, state, {
                 movies: state.movies.map((movie, index) => {
-                    if (index === action.index) {
+                    if (movie.id === action.id) {
                         return Object.assign({}, movie, {
                             isFavourite: !movie.isFavourite
                         })

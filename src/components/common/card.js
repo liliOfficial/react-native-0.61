@@ -7,10 +7,10 @@ import { movieToggleFavourite, toastPopup } from '../../actions';
 
 function Card(props) {
 
-    const { data, favouriteButton, index, movieToggleFavourite, toastPopup } = props;
+    const { data, favouriteButton, movieToggleFavourite, toastPopup } = props;
 
     const _movieToggleFavourite = () => {
-        movieToggleFavourite(index);
+        movieToggleFavourite(data.id);
         const message = data.isFavourite ? `Remove ${data.name} from favourite` : `Add ${data.name} to favourite`;
         toastPopup({ message, autoClose: 1000 });
     }
