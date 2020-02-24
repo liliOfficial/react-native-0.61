@@ -73,7 +73,7 @@ export default class OfferCarousel extends Component {
 
     render() {
 
-        const sliderWidth = Dimensions.get("window").width;;
+        const sliderWidth = Dimensions.get("window").width;
         const itemWidth = sliderWidth - 60;
         const loop = true;
         const autoplay = true;

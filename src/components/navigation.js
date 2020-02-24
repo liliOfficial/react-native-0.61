@@ -9,6 +9,7 @@ import MoviePage from './movie/movie';
 import CharactorList from './charactor/charactor-list/charactorList';
 import CharactorDetail from './charactor/charactor-detail/charactorDetail';
 import Chart from './chart/chart';
+import FavouritePage from './favourite/favourite';
 
 const CharactorNavigator = createStackNavigator({
   'Charactor List': {
@@ -48,12 +49,12 @@ const AppNavigator = createMaterialBottomTabNavigator(
         tabBarIcon: ({ focused }) => <Icon name="film" size={20} color={focused ? '#e62429' : '#666'} />
       }
     },
-    // GAMES: {
-    //   screen: MoviePage,
-    //   navigationOptions: {
-    //     tabBarIcon: ({ focused }) => <Icon name="gamepad" size={20} color={focused ? '#e62429' : '#666'} />,
-    //   }
-    // },
+    FAVOURITE: {
+      screen: FavouritePage,
+      navigationOptions: {
+        tabBarIcon: ({ focused }) => <Icon name="star" size={20} color={focused ? '#e62429' : '#666'} />,
+      }
+    },
 
     CHART: {
       screen: Chart,

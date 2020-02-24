@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Image, TouchableHighlight, Text } from 'react-native';
+import { StyleSheet, View, TouchableHighlight, Text } from 'react-native';
 
 export default function CharactorListCard(props) {
     const { data, navigation } = props;

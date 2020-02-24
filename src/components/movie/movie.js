@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { SafeAreaView, ScrollView, Text, View, StyleSheet } from 'react-native';
 
 import OfferCarousel from '../common/carousel';
@@ -6,8 +6,6 @@ import CardScroll from '../common/cardScroll';
 
 import { connect } from 'react-redux';
 import { getMovies } from '../../actions';
-
-import moviesList from '../../asset/data/movies.json';
 
 function MoviePage(props) {
 

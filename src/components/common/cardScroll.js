@@ -15,7 +15,7 @@ export default function CardScroll(props) {
               marginTop: 10,
               marginBottom: 15,
             }}>
-            <Card data={data} index={index} />
+            <Card data={data} index={index} favouriteButton={true}/>
           </View>
         );
       })}
