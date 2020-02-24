@@ -3,15 +3,16 @@ import { StyleSheet, View, Image, Text, TouchableHighlight } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { connect } from 'react-redux';
-import { toggleFavourite, toastPopup } from '../../actions';
+import { movieToggleFavourite, toastPopup } from '../../actions';
 
  function Card(props) {
 
-    const { data, toggleFavourite, toastPopup } = props;
+    const { data, index, movieToggleFavourite, toastPopup } = props;
 
-    const _toggleFavourite = () => {
-        const message = data.isFavourite ? 'Remove favourite':'Add favourite';
-        toastPopup({message});
+    const _movieToggleFavourite = () => {
+        movieToggleFavourite(index);
+        const message = data.isFavourite ? `Remove ${data.name} from favourite`:`Add ${data.name} to favourite`;
+        toastPopup({message, autoClose:1000});
     }
 
     return (
@@ -24,7 +25,7 @@ import { toggleFavourite, toastPopup } from '../../actions';
                     <Text>{data.date}</Text>
                 </View>
             </View>
-            <TouchableHighlight onPress={_toggleFavourite}>
+            <TouchableHighlight onPress={_movieToggleFavourite}>
                 <Icon name={data.isFavourite ? 'star' : 'star-o'} size={20} style={styles.icon} />
             </TouchableHighlight>
         </View>
@@ -86,5 +87,5 @@ const mapStateToProps = state => {
     return { toastMessage };
 }
 
-export default connect(mapStateToProps, { toggleFavourite,toastPopup })(Card);
+export default connect(mapStateToProps, { movieToggleFavourite,toastPopup })(Card);
 
